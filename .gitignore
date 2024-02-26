@@ -1,0 +1,23 @@
+# Local audio files
+audio/*
+
+# C# build artifacts
+[Ff]reddy/bin/
+[Ff]reddy/obj/
+
+# C++ build artifacts
+[Ff]reddysEssentia/build/
+
+# Visual Studio files
+*.vs/
+
+# User-specific files
+*.user
+*.suo
+*.sln.docstates
+
+# IntelliJ IDEA files
+*.idea/
+
+# Dependency directories
+packages/
