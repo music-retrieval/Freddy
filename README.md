@@ -1,17 +1,24 @@
 # Freddy
 
+A guitar Assistant?
+
+## Dependencies
+
+Ensure you have installed the following dependecies
+
+- [Docker](https://docs.docker.com/get-docker/)
+
+You are now ready to run this application.
+
 ## Build and Run
 
+To build and run this application, simply run
+
     docker build -t freddy .
+
+Followed by,
+
     docker run freddy
 
-Note that this dockerized has 3 stages:
-
-1. Pull an Essentia image and compile C++ code
-1. Pull a .NET developement image and build C# project
-1. Compile both togther (this doesn't yet work)
-
-Issue is most likely an OS mismatch problem (dll vs so file)
-or just a long tree of dependencies.
-
-Good luck.
+This process successfully build and runs 2 layers
+of the application. (3rd to come).

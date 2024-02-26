@@ -1,12 +1,3 @@
 using Freddy;
 
-List<Double> audio = Essentia.getAudio();
-Console.WriteLine(audio.Count);
-
-var counter = 0;
-var max = args.Length is not 0 ? Convert.ToInt32(args[0]) : -1;
-while (max is -1 || counter < max)
-{
-    Console.WriteLine($"Counter: {++counter}");
-    await Task.Delay(TimeSpan.FromMilliseconds(1_000));
-}
+Console.WriteLine(Essentia.getAudio()[50]);
