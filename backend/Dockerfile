@@ -25,6 +25,7 @@ FROM mcr.microsoft.com/dotnet/sdk:latest AS dotnet-builder
 
 # Set the working directory (App for .NET)
 WORKDIR /App
+EXPOSE 80
 
 # Copy the C# project
 COPY ./Freddy/ ./
