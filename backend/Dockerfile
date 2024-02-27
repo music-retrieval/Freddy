@@ -42,7 +42,7 @@ FROM mcr.microsoft.com/dotnet/aspnet:8.0-bookworm-slim-amd64
 WORKDIR /Run
 
 # Copy the audio files if present
-COPY /audio/* /Run/
+COPY ./audio/* /Run/
 
 # Copy the C# application
 COPY --from=dotnet-builder /App/out .
