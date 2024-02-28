@@ -8,8 +8,9 @@ WORKDIR /app
 COPY package.json package-lock.json ./
 
 # Install dependencies including http-server
-# RUN npm cache clean --force 
-RUN npm install --no-optional && npm install -g http-server
+RUN npm cache clean --force 
+RUN npm install --omit=optional
+RUN npm install -g http-server
 
 # Copy the rest of the application code to the working directory
 COPY . .

@@ -1,4 +1,4 @@
-using Freddy;
+using Fretty;
 
 Console.WriteLine(Essentia.getAudio()[50]);
 

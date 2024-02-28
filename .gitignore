@@ -4,11 +4,11 @@
 backend/audio/*
 
 # C# build artifacts
-backend/[Ff]reddy/bin/
-[Ff]reddy/obj/
+backend/[Ff]retty/bin/
+[Ff]retty/obj/
 
 # C++ build artifacts
-[backend/Ff]reddysEssentia/build/
+[backend/Ff]rettysEssentia/build/
 
 # Visual Studio files
 *.vs/

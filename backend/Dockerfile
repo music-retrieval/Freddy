@@ -12,7 +12,7 @@ RUN apt-get update && \
 WORKDIR /app
 
 # Copy the C++ source code into the container
-COPY ./FreddysEssentia/ /app
+COPY ./FrettysEssentia/ /app
 
 # Compile the C++ application into a shared object
 RUN mkdir build && \
@@ -28,7 +28,7 @@ WORKDIR /App
 EXPOSE 80
 
 # Copy the C# project
-COPY ./Freddy/ ./
+COPY ./Fretty/ ./
 
 # Restore NuGet packages
 RUN dotnet restore
@@ -42,7 +42,7 @@ FROM mcr.microsoft.com/dotnet/aspnet:8.0-bookworm-slim-amd64
 WORKDIR /Run
 
 # Copy the audio files if present
-COPY ./audio/* /Run/
+COPY ./audio /Run/
 
 # Copy the C# application
 COPY --from=dotnet-builder /App/out .
@@ -59,4 +59,4 @@ COPY --from=cpp-builder /lib/x86_64-linux-gnu/libkeyutils.so.1 .
 ENV LD_LIBRARY_PATH $LD_LIBRARY_PATH:/Run/
 
 # Set entrypoint, this runs the application
-ENTRYPOINT ["dotnet", "Freddy.dll"]
+ENTRYPOINT ["dotnet", "Fretty.dll"]
