@@ -1,8 +1,18 @@
 using Fretty;
 
 Console.WriteLine(Essentia.getAudio()[50]);
+var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Add configuration for cors
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: MyAllowSpecificOrigins, 
+        policy  => { 
+            policy.WithOrigins("http://localhost:8080", "http://localhost:3000"); 
+        });
+});
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -40,6 +50,7 @@ app.MapGet("/weatherforecast", () =>
     .WithName("GetWeatherForecast")
     .WithOpenApi();
 
+app.UseCors(MyAllowSpecificOrigins);
 app.Run();
 
 record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
