@@ -1,4 +1,4 @@
-@Fretty_HostAddress = http://localhost:5151
+@Fretty_HostAddress = http://localhost:8080
 
 GET {{Fretty_HostAddress}}/weatherforecast/
 Accept: application/json
