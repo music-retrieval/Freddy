@@ -1,20 +1,20 @@
 using System.Runtime.InteropServices;
 
-namespace Freddy;
+namespace Fretty;
 
 public class Essentia
 {
-    [DllImport("libFreddysEssentia.so", CallingConvention = CallingConvention.Cdecl)]
+    [DllImport("libFrettysEssentia.so", CallingConvention = CallingConvention.Cdecl)]
     private static extern void test();
     
     // Declare the external functions from the C++ DLL
-    [DllImport("libFreddysEssentia.so", CallingConvention = CallingConvention.Cdecl)]
+    [DllImport("libFrettysEssentia.so", CallingConvention = CallingConvention.Cdecl)]
     private static extern void essentia_init();
 
-    [DllImport("libFreddysEssentia.so", CallingConvention = CallingConvention.Cdecl)]
+    [DllImport("libFrettysEssentia.so", CallingConvention = CallingConvention.Cdecl)]
     private static extern void essentia_shutdown();
 
-    [DllImport("libFreddysEssentia.so", CallingConvention = CallingConvention.Cdecl)]
+    [DllImport("libFrettysEssentia.so", CallingConvention = CallingConvention.Cdecl)]
     private static extern void essentia_load_audio(string audioFilename, double[] audioBuffer, UIntPtr length);
 
     public static double[] getAudio()
@@ -23,7 +23,7 @@ public class Essentia
         
         // Call the C++ function from C#
         essentia_init();
-        essentia_load_audio("/Run/example_audio_file.mp3", buffer, 100);
+        // essentia_load_audio("/Run/example_audio_file.mp3", buffer, 100);
         essentia_shutdown();
 
         return buffer;
