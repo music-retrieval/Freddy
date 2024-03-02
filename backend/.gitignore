@@ -2,11 +2,11 @@
 audio/*
 
 # C# build artifacts
-[Ff]reddy/bin/
-[Ff]reddy/obj/
+[Ff]retty/bin/
+[Ff]retty/obj/
 
 # C++ build artifacts
-[Ff]reddysEssentia/build/
+[Ff]rettysEssentia/build/
 
 # Visual Studio files
 *.vs/

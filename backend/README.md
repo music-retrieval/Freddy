@@ -1,4 +1,4 @@
-# Freddy
+# Fretty
 
 A guitar Assistant?
 
@@ -14,11 +14,11 @@ You are now ready to run this application.
 
 To build and run this application, simply run
 
-    docker build -t freddy .
+    docker build -t fretty .
 
 Followed by,
 
-    docker run freddy
+    docker run fretty
 
 This process successfully build and runs 2 layers
 of the application. (3rd to come).
