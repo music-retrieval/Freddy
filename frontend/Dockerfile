@@ -21,4 +21,4 @@ RUN npm run build
 EXPOSE 3000
 
 # Command to start http-server serving the built React app
-CMD ["http-server", "-p", "3000", "build"]
+CMD ["http-server", "-p", "3000", "build", "--cors"]
